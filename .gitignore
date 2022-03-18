@@ -17,6 +17,15 @@
 ./BobsHuizenmarktAdventure/[Ll]ogs/
 ./BobsHuizenmarktAdventure/[Mm]emoryCaptures/
 
+/[Ll]ibrary/*
+/[Tt]emp/*
+/[Oo]bj/*
+/[Bb]uild/*
+/[Bb]uilds/*
+/[Ll]ogs/*
+/[Mm]emoryCaptures/*
+
+
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
 
@@ -67,13 +76,13 @@ sysinfo.txt
 crashlytics-build.properties
 
 *.log
-./BobsHuizenmarktAdventure/[Ll]ibrary/
-./BobsHuizenmarktAdventure/[Tt]emp/
-./BobsHuizenmarktAdventure/[Oo]bj/
-./BobsHuizenmarktAdventure/[Bb]uild/
-./BobsHuizenmarktAdventure/[Bb]uilds/
-./BobsHuizenmarktAdventure/[Ll]ogs/
-./BobsHuizenmarktAdventure/[Mm]emoryCaptures/
+./BobsHuizenmarktAdventure/[Ll]ibrary/*
+./BobsHuizenmarktAdventure/[Tt]emp/*
+./BobsHuizenmarktAdventure/[Oo]bj/*
+./BobsHuizenmarktAdventure/[Bb]uild/*
+./BobsHuizenmarktAdventure/[Bb]uilds/*
+./BobsHuizenmarktAdventure/[Ll]ogs/*
+./BobsHuizenmarktAdventure/[Mm]emoryCaptures/*
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 ./BobsHuizenmarktAdventure/[Aa]ssets/**/*.meta
