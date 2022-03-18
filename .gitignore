@@ -9,6 +9,13 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Mm]emoryCaptures/
+./BobsHuizenmarktAdventure/[Ll]ibrary/
+./BobsHuizenmarktAdventure/[Tt]emp/
+./BobsHuizenmarktAdventure/[Oo]bj/
+./BobsHuizenmarktAdventure/[Bb]uild/
+./BobsHuizenmarktAdventure/[Bb]uilds/
+./BobsHuizenmarktAdventure/[Ll]ogs/
+./BobsHuizenmarktAdventure/[Mm]emoryCaptures/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
