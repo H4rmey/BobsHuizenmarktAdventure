@@ -5,16 +5,26 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
+<<<<<<< HEAD
       ticks: 637832341747278114
     m_Hash: 1057529631
+=======
+      ticks: 637832331929789638
+    m_Hash: 228985270
+>>>>>>> main
   m_LockFileStatus:
     m_FilePath: C:/Users/hammi/Documents/Unity/BobsHuizenmarktAdventure/BobsHuizenmarktAdventure/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
+<<<<<<< HEAD
       ticks: 637832341747278114
     m_Hash: 1165375285
+=======
+      ticks: 637832332049871788
+    m_Hash: 1587512919
+>>>>>>> main
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
