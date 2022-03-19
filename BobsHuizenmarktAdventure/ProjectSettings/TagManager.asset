@@ -6,6 +6,7 @@ TagManager:
   tags:
   - MouseEnviroment
   - Key
+  - Lock
   layers:
   - Default
   - TransparentFX
