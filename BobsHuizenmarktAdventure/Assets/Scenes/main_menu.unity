@@ -571,6 +571,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1750056dfcd4c754a90d6ab8069acb75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameName:
+  - ChopMeat
+  - FlowerInLight
+  - WipeWindow
+  - WireConnect
 --- !u!4 &409972090
 Transform:
   m_ObjectHideFlags: 0

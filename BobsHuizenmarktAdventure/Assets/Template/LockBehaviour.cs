@@ -8,6 +8,7 @@ public class LockBehaviour : MonoBehaviour {
 
     [HideInInspector]
     public bool hasBeenTriggered = false;
+    public bool hasBeenRemoved = false;
     private KeyBehaviour keyBehaviour;
 
     public float maxTime = 0;
@@ -16,8 +17,6 @@ public class LockBehaviour : MonoBehaviour {
 
     void Update()
     {
-        Debug.Log(timer);
-
         if (timer > maxTime) {
             timer = 0;
             timerActive = false;

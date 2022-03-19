@@ -325,9 +325,6 @@ MonoBehaviour:
   - {fileID: 1307160945208192659}
   - {fileID: 6765578916891122344}
   - {fileID: 3852141964998249846}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   useAutocomplete: 0
 --- !u!1 &3158848422306759963
 GameObject:
@@ -456,6 +453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   klid: 1
   hasBeenTriggered: 0
+  hasBeenRemoved: 0
   maxTime: 0.5
 --- !u!1 &3317597684561597412
 GameObject:
@@ -804,6 +802,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   klid: 2
   hasBeenTriggered: 0
+  hasBeenRemoved: 0
   maxTime: 0.5
 --- !u!1 &4438080317428169561
 GameObject:
@@ -1143,6 +1142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   klid: 0
   hasBeenTriggered: 0
+  hasBeenRemoved: 0
   maxTime: 0.5
 --- !u!1 &8838656339099372380
 GameObject:

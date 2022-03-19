@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class LockManager : MonoBehaviour {
 
+    GameManager gameManager;
+
     public List<LockBehaviour> locks;
     public bool useAutocomplete = false;
 
+    private int count = 0;
+
     void Start() {
+        gameManager = FindObjectOfType<GameManager>();
+
         if (useAutocomplete) {
             locks.Clear();
             GameObject[] go = GameObject.FindGameObjectsWithTag("Lock");
@@ -19,19 +25,18 @@ public class LockManager : MonoBehaviour {
     }
 
     void Update() {
-        if (locks.Count > 0) {
-            for (int i = 0; i < locks.Count; i++) {
-                LockBehaviour lockB = locks[i];
+        for (int i = 0; i < locks.Count; i++) {
+            LockBehaviour lockB = locks[i];
 
-                if (lockB.hasBeenTriggered) {
-                    locks.Remove(lockB);
-                    Destroy(lockB.gameObject);
-                }
+            if (lockB.hasBeenTriggered) {
+                locks.RemoveAt(i);
+                Destroy(lockB.gameObject); 
             }
         }
 
+        Debug.Log(locks.Count);
         if (locks.Count <= 0) {
-            Debug.Log("you completed game :)");
+            gameManager.goToNextGame();
         }
     }
 }
