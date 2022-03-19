@@ -30,7 +30,7 @@ public class LockBehaviour : MonoBehaviour {
         }
 
         if (keyBehaviour.uses <= 0) {
-            Destroy(gameObject);
+            Destroy(keyBehaviour.transform.gameObject);
         }
     }
 
