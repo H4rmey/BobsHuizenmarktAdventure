@@ -142,10 +142,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e409036c83ffff14eacf788a5c51f8d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: {x: 0, y: 0, z: 0}
-  end: {x: 10, y: 10, z: 10}
   width: 1
-  color: {r: 0, g: 0, b: 0, a: 0}
+  color: {r: 0.070259035, g: 0.5849056, b: 0, a: 0}
+  start: {fileID: 2832792342850308681}
+  end: {fileID: 6320958444683111980}
 --- !u!1 &1818551423814926402
 GameObject:
   m_ObjectHideFlags: 0
@@ -782,10 +782,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e409036c83ffff14eacf788a5c51f8d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: {x: 0, y: 0, z: 0}
-  end: {x: 10, y: 10, z: 10}
   width: 1
-  color: {r: 0, g: 0, b: 0, a: 0}
+  color: {r: 1, g: 0.41492456, b: 0, a: 0}
+  start: {fileID: 7291262269654920496}
+  end: {fileID: 6609645668954191049}
 --- !u!1 &3499303180324189770
 GameObject:
   m_ObjectHideFlags: 0
@@ -1237,7 +1237,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5420479349824085031}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.83, y: 0, z: -4.71}
+  m_LocalPosition: {x: -5.83, y: 0, z: 3.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6206897339877443455}
@@ -1459,7 +1459,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6284958839126247119}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.83, y: 0, z: 3.89}
+  m_LocalPosition: {x: -5.83, y: 0, z: -4.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6206897339877443455}
@@ -1892,10 +1892,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e409036c83ffff14eacf788a5c51f8d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: {x: 0, y: 0, z: 0}
-  end: {x: 10, y: 10, z: 10}
   width: 1
-  color: {r: 0, g: 0, b: 0, a: 0}
+  color: {r: 1, g: 0, b: 0.07585335, a: 0}
+  start: {fileID: 2302097450843827325}
+  end: {fileID: 7877304271297721670}
 --- !u!1 &8912436115479186349
 GameObject:
   m_ObjectHideFlags: 0
@@ -1905,7 +1905,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6206897339877443455}
-  - component: {fileID: 871424419404319316}
   m_Layer: 0
   m_Name: Wires
   m_TagString: Untagged
@@ -1933,27 +1932,3 @@ Transform:
   m_Father: {fileID: 2083377702845119867}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &871424419404319316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8912436115479186349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2134a16baf034884c9c4ff81001a13ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  start_points:
-  - {fileID: 7877304271297721670}
-  - {fileID: 2832792342850308681}
-  - {fileID: 7291262269654920496}
-  end_points:
-  - {fileID: 2302097450843827325}
-  - {fileID: 6320958444683111980}
-  - {fileID: 6609645668954191049}
-  wires:
-  - {fileID: 6450222147149379798}
-  - {fileID: 232554111476348821}
-  - {fileID: 7084858697401387140}
