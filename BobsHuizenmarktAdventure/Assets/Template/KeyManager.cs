@@ -26,7 +26,8 @@ public class KeyManager : MonoBehaviour
         }
 
         if (currentKey) {
-            currentKey.transform.position = hit.point;
+            float y = currentKey.GetComponent<BoxCollider>().size.y;
+            currentKey.transform.position = hit.point + new Vector3(0, y/2, 0);
         }
     }
 }
