@@ -28,9 +28,9 @@ public class LockBehaviour : MonoBehaviour {
             timer += Time.deltaTime;
         }
 
-        if (keyBehaviour != null && keyBehaviour.uses <= 0) {
-            Destroy(keyBehaviour.transform.gameObject);
-        }
+        //if (keyBehaviour != null && keyBehaviour.uses <= 0) {
+        //    Destroy(keyBehaviour.transform.gameObject);
+        //}
     }
 
     public void startTimer() {
