@@ -11,4 +11,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/game.unity
     guid: a868ab30d8597ff4e8f1295594a4554e
+  - enabled: 1
+    path: Assets/Scenes/MicroScenes/ChopMeat.unity
+    guid: aec8db69de095dc479fe6d860e5b2a91
+  - enabled: 1
+    path: Assets/Scenes/MicroScenes/FlowerInLight.unity
+    guid: 5fc65aaecee0d104c8877d5265774534
+  - enabled: 1
+    path: Assets/Scenes/MicroScenes/WipeWindow.unity
+    guid: 2e6819aa80fee404184b5cbd5fde5cec
+  - enabled: 1
+    path: Assets/Scenes/MicroScenes/WireConnect.unity
+    guid: 69e54f8a01191bc44887930cad67a0a7
   m_configObjects: {}

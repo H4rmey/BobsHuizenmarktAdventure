@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/microgame_ui_test.unity
+=======
+- path: Assets/Scenes/MicroScenes/ChopMeat.unity
+>>>>>>> main
   isLoaded: 1
   isActive: 1
   isSubScene: 0

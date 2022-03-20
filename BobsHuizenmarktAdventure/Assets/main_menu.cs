@@ -3,8 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class main_menu : MonoBehaviour
-{
+public class main_menu : MonoBehaviour {
+    
+    GameManager gameManager;
+
+    public void Start() {
+        gameManager = FindObjectOfType<GameManager>();
+    }
 
     public void Update()
     {
@@ -24,19 +29,20 @@ public class main_menu : MonoBehaviour
     bool isAnimationStatePlaying(Animator anim, int animLayer, string stateName)
     {
         if (anim.GetCurrentAnimatorStateInfo(animLayer).IsName(stateName) &&
-                anim.GetCurrentAnimatorStateInfo(animLayer).normalizedTime < 1.0f)
+            anim.GetCurrentAnimatorStateInfo(animLayer).normalizedTime < 1.0f) {
             return true;
-        else
+        }
+        else {
             return false;
+        }
     }
 
-    public void start_game()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    public void start_game() {
+        gameManager.goToNextGame(); 
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    public void quit_game()
-    {
+    public void quit_game() {
         Application.Quit();
     }
 }
