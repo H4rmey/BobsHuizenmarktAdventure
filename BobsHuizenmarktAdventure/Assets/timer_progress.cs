@@ -6,24 +6,59 @@ using UnityEngine.UI;
 public class timer_progress : MonoBehaviour
 {   
     public Image timer_circle;
-    public bool start_game;
-    public bool time_end;
-    public float waitTime = 30.0f;
+    public Canvas microgame_ui_progress;
+    public Canvas microgame_ui_succes;
+    public Canvas microgame_ui_fail;
+
+    public bool microgame_start;
+    public bool microgame_end;
+    public bool microgame_fail;
+    public bool microgame_succes;    
+    public float waitTime = 5f;
+
+    void Start()
+    {
+        microgame_start = false;
+        microgame_end = false;
+        microgame_fail = false;
+        microgame_succes = false;
+
+        microgame_ui_fail.enabled = false;
+        microgame_ui_succes.enabled = false;
+        microgame_ui_progress.enabled = false;
+    }
 
     // Update is called once per frame
     void Update()
     {
-        //Reduce fill amount over 30 seconds
-        game_time(start_game);
+        microgame_state();
     }
 
-    public void game_time(bool start_game)
+    public void microgame_state()
     {
-        if (start_game == true)
+        if (microgame_start == true)
         {
-            if(timer_circle.fillAmount <= 0f)
+            microgame_ui_progress.enabled = true;
+
+            if(microgame_fail == true)
             {
-                time_end = true;
+                microgame_ui_succes.enabled = false;
+                microgame_ui_progress.enabled = false;
+                microgame_ui_fail.enabled = true;
+                microgame_end = true;
+            }
+
+            if(microgame_succes == true)
+            {
+                microgame_ui_fail.enabled = false;
+                microgame_ui_progress.enabled = false;
+                microgame_ui_succes.enabled = true;
+                microgame_end = true;
+            }
+
+            if (timer_circle.fillAmount <= 0f)
+            {
+                microgame_fail = true;
             }
             else
             {
