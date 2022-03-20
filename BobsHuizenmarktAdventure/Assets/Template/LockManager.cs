@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class LockManager : MonoBehaviour {
 
@@ -10,6 +11,8 @@ public class LockManager : MonoBehaviour {
     public bool useAutocomplete = false;
 
     private int count = 0;
+
+    public UnityEvent e_endGame;
 
     void Start() {
         gameManager = FindObjectOfType<GameManager>();
@@ -36,6 +39,7 @@ public class LockManager : MonoBehaviour {
 
         Debug.Log(locks.Count);
         if (locks.Count <= 0) {
+            e_endGame.Invoke();
             gameManager.goToNextGame();
         }
     }
