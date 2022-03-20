@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/MicroScenes/ChopMeat.unity
+- path: Assets/Scenes/microgame_ui_test.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
