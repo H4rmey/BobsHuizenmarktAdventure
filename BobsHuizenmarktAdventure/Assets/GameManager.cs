@@ -9,6 +9,11 @@ public class GameManager : MonoBehaviour {
     private List<int> ids = new List<int>();
 
     private int currentID = 0;
+
+    public float sceneSwitchDelay = 2;
+
+    [HideInInspector]
+    public bool isLoading = false;
     
     void Awake() {
         DontDestroyOnLoad(this.gameObject);
@@ -27,6 +32,25 @@ public class GameManager : MonoBehaviour {
     }
 
     public void goToNextGame() {
-        SceneManager.LoadScene( gameName[ ids[currentID++] ] );
+        Debug.Log("loading");
+        if (currentID >= ids.Count) {
+            SceneManager.LoadScene("main_menu");
+            ids.Clear();
+            currentID = 0;  
+            while(ids.Count < gameName.Count) { 
+                int r = Random.Range(0, gameName.Count - 1);
+
+                if (!ids.Contains(r)) {
+                    ids.Add(r);
+                }
+                r++;
+                if (!ids.Contains(r)) {
+                    ids.Add(r);
+                }
+            }
+        }
+        else {
+            SceneManager.LoadScene(gameName[ids[currentID++]]);
+        }
     }
 }

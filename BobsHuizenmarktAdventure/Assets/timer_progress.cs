@@ -10,19 +10,14 @@ public class timer_progress : MonoBehaviour
     public Canvas microgame_ui_succes;
     public Canvas microgame_ui_fail;
 
-    public bool microgame_start;
-    public bool microgame_end;
-    public bool microgame_fail;
-    public bool microgame_succes;    
+    public bool microgame_start = true;
+    public bool microgame_end = false;
+    public bool microgame_fail = false;
+    public bool microgame_succes = false;    
     public float waitTime = 5f;
 
     void Start()
     {
-        microgame_start = false;
-        microgame_end = false;
-        microgame_fail = false;
-        microgame_succes = false;
-
         microgame_ui_fail.enabled = false;
         microgame_ui_succes.enabled = false;
         microgame_ui_progress.enabled = false;

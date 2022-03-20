@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class LockManager : MonoBehaviour {
 
     GameManager gameManager;
+    public timer_progress tp;
 
     public List<LockBehaviour> locks;
     public bool useAutocomplete = false;
@@ -16,6 +17,7 @@ public class LockManager : MonoBehaviour {
 
     void Start() {
         gameManager = FindObjectOfType<GameManager>();
+        tp = FindObjectOfType<timer_progress>();
 
         if (useAutocomplete) {
             locks.Clear();
@@ -25,9 +27,12 @@ public class LockManager : MonoBehaviour {
                 locks.Add(go[i].GetComponent<LockBehaviour>());
             }
         }
+
+        gameManager.isLoading = false;
     }
 
     void Update() {
+        tp.microgame_start = true;
         for (int i = 0; i < locks.Count; i++) {
             LockBehaviour lockB = locks[i];
 
@@ -37,10 +42,18 @@ public class LockManager : MonoBehaviour {
             }
         }
 
-        Debug.Log(locks.Count);
-        if (locks.Count <= 0) {
+        if (tp.microgame_fail && !gameManager.isLoading) {
+            Debug.Log("fail");
+            gameManager.isLoading = true;
             e_endGame.Invoke();
-            gameManager.goToNextGame();
+            gameManager.Invoke("goToNextGame", gameManager.sceneSwitchDelay);
+        }
+        else if (locks.Count <= 0 && !gameManager.isLoading) {
+            Debug.Log("succes");
+            tp.microgame_succes = true;
+            gameManager.isLoading = true;
+            e_endGame.Invoke();
+            gameManager.Invoke("goToNextGame", gameManager.sceneSwitchDelay);
         }
     }
 }
